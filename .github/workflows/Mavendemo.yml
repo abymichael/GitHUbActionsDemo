@@ -25,7 +25,7 @@ jobs:
 
       # Step 3: Set up browser drivers
 
-      - uses: actions/checkout@v2
+      
       - name: Set up ChromeDriver
         uses: actions/gh-action-chromedriver@latest
       - name: Run tests
