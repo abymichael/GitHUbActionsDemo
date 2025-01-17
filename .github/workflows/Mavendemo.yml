@@ -24,7 +24,7 @@ jobs:
           java-version: '17' # Use the version required for your project
 
       # Step 3: Set up browser drivers
-(e.g., ChromeDriver)
+
       - name: Set up ChromeDriver
         uses: actions/setup-chromedriver@v1
         with:
