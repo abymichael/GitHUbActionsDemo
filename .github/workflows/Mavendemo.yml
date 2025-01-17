@@ -24,11 +24,11 @@ jobs:
           java-version: '17' # Use the version required for your project
 
       # Step 3: Set up browser drivers
-
+steps:
+      - uses: actions/checkout@v2
       - name: Set up ChromeDriver
-        uses: actions/setup-chromedriver@v1
-        with:
-          version: 'latest'
+        uses: actions/gh-action-chromedriver@latest
+      - name: Run tests
 
       # Step 4: Install Maven dependencies
       - name: Install Maven dependencies
