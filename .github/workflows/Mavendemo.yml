@@ -1,39 +1,25 @@
 name: Selenium Java Workflow
-
-on:
+'on':
   push:
     branches:
       - main
   pull_request:
     branches:
       - main
-
 jobs:
   selenium-tests:
     runs-on: windows-latest
-
     steps:
-      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
-
-      # Step 2: Set up Java
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17' # Use the version required for your project
-
-      # Step 3: Set up browser drivers
-
-      
+          java-version: '17'
       - name: Set up ChromeDriver
-        uses: actions/gh-action-chromedriver@latest
+        uses: sebastianp/gh-action-chromedriver@latest
       - name: Run tests
-
-      # Step 4: Install Maven dependencies
       - name: Install Maven dependencies
         run: mvn install
-
-      # Step 5: Run Selenium tests
       - name: Run Selenium tests
         run: mvn test
